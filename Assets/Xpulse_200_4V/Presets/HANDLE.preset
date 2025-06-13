@@ -1,0 +1,227 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: HANDLE
+  m_TargetType:
+    m_NativeTypeID: 23
+    m_ManagedTypePPtr: {fileID: 0}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_CastShadows
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ReceiveShadows
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_DynamicOccludee
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_StaticShadowCaster
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MotionVectors
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_LightProbeUsage
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ReflectionProbeUsage
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_RayTracingMode
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_RayTraceProcedural
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_RenderingLayerMask
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_RendererPriority
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.size
+    value: 20
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[0]
+    value: 
+    objectReference: {fileID: 2100000, guid: ec9c08d366ebb66489184fe449c10659, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[1]
+    value: 
+    objectReference: {fileID: 2100000, guid: a25919702419cef4fa61d2d6bd6a122a, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[2]
+    value: 
+    objectReference: {fileID: 2100000, guid: 0e2ccce7e9901404f86f26b217bd5c12, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[3]
+    value: 
+    objectReference: {fileID: 2100000, guid: 0e2ccce7e9901404f86f26b217bd5c12, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[4]
+    value: 
+    objectReference: {fileID: 2100000, guid: b237c464bb4a0af4b8ebbb69d437046f, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[5]
+    value: 
+    objectReference: {fileID: -1360991219368177298, guid: f3e2fff956e827242a81ae583985b322, type: 3}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[6]
+    value: 
+    objectReference: {fileID: 2100000, guid: 88d911dd9de61334fa1da7e1602cbc41, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[7]
+    value: 
+    objectReference: {fileID: 2100000, guid: 8cc2bed7a9ec79a4f95f601cdf0bc462, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[8]
+    value: 
+    objectReference: {fileID: 2100000, guid: 8cc2bed7a9ec79a4f95f601cdf0bc462, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[9]
+    value: 
+    objectReference: {fileID: 2100000, guid: d479043015f68c840877fcdf6d1e07b2, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[10]
+    value: 
+    objectReference: {fileID: 2100000, guid: a25919702419cef4fa61d2d6bd6a122a, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[11]
+    value: 
+    objectReference: {fileID: 8843454256981372561, guid: f3e2fff956e827242a81ae583985b322, type: 3}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[12]
+    value: 
+    objectReference: {fileID: 2100000, guid: 7a1b56981eca9ad498e96d143a603f66, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[13]
+    value: 
+    objectReference: {fileID: 2100000, guid: 460f28587cddf6442add18f571dc2ed0, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[14]
+    value: 
+    objectReference: {fileID: 2100000, guid: a25919702419cef4fa61d2d6bd6a122a, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[15]
+    value: 
+    objectReference: {fileID: 2100000, guid: a25919702419cef4fa61d2d6bd6a122a, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[16]
+    value: 
+    objectReference: {fileID: 2100000, guid: a25919702419cef4fa61d2d6bd6a122a, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[17]
+    value: 
+    objectReference: {fileID: 2100000, guid: 0a07e9331e5e3db4d93e6cb09d71b7e2, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[18]
+    value: 
+    objectReference: {fileID: 2100000, guid: 3ed7694e5c3cac84788aaf7f994c48ac, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_Materials.Array.data[19]
+    value: 
+    objectReference: {fileID: 2100000, guid: a464a33f2c00aa943be827fb08079ef6, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_StaticBatchInfo.firstSubMesh
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_StaticBatchInfo.subMeshCount
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_StaticBatchRoot
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProbeAnchor
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_LightProbeVolumeOverride
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ScaleInLightmap
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ReceiveGI
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_PreserveUVs
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_IgnoreNormalsForChartDetection
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ImportantGI
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_StitchLightmapSeams
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_SelectedEditorRenderState
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MinimumChartSize
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_AutoUVMaxDistance
+    value: 0.5
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_AutoUVMaxAngle
+    value: 89
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_LightmapParameters
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_SortingLayerID
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_SortingLayer
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_SortingOrder
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_AdditionalVertexStreams
+    value: 
+    objectReference: {fileID: 0}
+  m_ExcludedProperties: []
