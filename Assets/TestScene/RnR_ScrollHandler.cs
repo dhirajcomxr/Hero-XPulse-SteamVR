@@ -78,7 +78,7 @@ public class RnR_ScrollHandler : MonoBehaviour
     public Scrollbar scrollBar;
     public int numberOfItems;
     public int currentStep;
-    [SerializeField] private Steps stepScript;
+    public Steps stepScript;
     // Start is called before the first frame update
     void OnEnable()
     {
