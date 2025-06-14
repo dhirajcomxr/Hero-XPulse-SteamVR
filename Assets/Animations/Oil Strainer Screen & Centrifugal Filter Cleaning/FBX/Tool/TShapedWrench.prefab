@@ -127,8 +127,7 @@ GameObject:
   - component: {fileID: 249091654409064644}
   - component: {fileID: 7040401011362714217}
   - component: {fileID: 1586802896747055024}
-  - component: {fileID: 8409819771313058932}
-  - component: {fileID: 5729971331327794915}
+  - component: {fileID: 8437708675337727584}
   m_Layer: 0
   m_Name: TShapedWrench
   m_TagString: Untagged
@@ -175,8 +174,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -324,7 +323,7 @@ MonoBehaviour:
   m_OnDeactivate:
     m_PersistentCalls:
       m_Calls: []
-  m_AttachTransform: {fileID: 1848799478305797599}
+  m_AttachTransform: {fileID: 0}
   m_SecondaryAttachTransform: {fileID: 0}
   m_UseDynamicAttach: 0
   m_MatchAttachPosition: 1
@@ -369,12 +368,12 @@ MonoBehaviour:
   m_ThrowVelocityScale: 1.5
   m_ThrowAngularVelocityScale: 1
   m_ForceGravityOnDetach: 0
-  m_RetainTransformParent: 1
+  m_RetainTransformParent: 0
   m_AttachPointCompatibilityMode: 0
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &8409819771313058932
+--- !u!114 &8437708675337727584
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -383,24 +382,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6246516992688869598}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 701022f2571c19f4a84d5412b79935a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 91ff81a349ddf3848a3bce26629a5f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toolTransform: {fileID: 2083499828608427834}
-  rotationThreshold: 720
+  requiredRotationDegrees: 720
   isFullyRotated: 0
---- !u!114 &5729971331327794915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6246516992688869598}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a673df42455449c4d8a725764a3e4bc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7491057099518250394
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,9 +578,9 @@ Transform:
   m_GameObject: {fileID: 8294528157537109108}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.115}
-  m_LocalScale: {x: 0.71767807, y: 0.71767807, z: 0.71767807}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0.0799}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7596392422227934824}
   - {fileID: 2050700752186798302}
