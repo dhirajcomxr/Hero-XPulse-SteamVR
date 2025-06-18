@@ -1,81 +1,133 @@
-using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class ToolRotationInteraction : MonoBehaviour
 {
-    public UnityEvent RotationCompleted;
-    public float requiredRotationDegrees = 720f; // 2 full turns
-    public bool isFullyRotated = false;
+    public UnityEvent executeOnRotationComplete;
+    public XRGrabInteractable xRGrabInteractable;
+    public Transform xRController;
+    public bool isAttached = false;
+    public bool isToolInteracting = false;
 
-    public XRBaseInteractor currentInteractor;
-    public float totalRotation = 0f;
-    public float lastZRotation = 0f;
-    public bool isTracking = false;
+    public Transform t_HandleGfx;
 
-    // private void OnEnable()
-    // {
-    //     var grabInteractable = GetComponent<XRGrabInteractable>();
-    //     grabInteractable.selectEntered.AddListener(OnGrab);
-    //     grabInteractable.selectExited.AddListener(OnRelease);
-    // }
+    public Vector3 controllerRotation;
+    public float rotationSpeed = 50f;   // Adjust rotation sensitivity
+    public int requireRotation = 3;
+    public bool isClockwiseStep = true;
 
-    // private void OnDisable()
-    // {
-    //     var grabInteractable = GetComponent<XRGrabInteractable>();
-    //     grabInteractable.selectEntered.RemoveListener(OnGrab);
-    //     grabInteractable.selectExited.RemoveListener(OnRelease);
-    // }
+    private float previousYaw;          // Previous Yaw angle of controller
+    private bool isFirstFrame = true;
 
-    private void OnGrab(SelectEnterEventArgs args)
+    private float totalZRotation = 0f;  // Accumulated rotation in degrees
+    private int fullRotations = 0;       // Full 360-degree turns
+    private float lastZ;                // Last Z angle of handle
+
+    void Start()
     {
-        currentInteractor = args.interactorObject.transform.GetComponent<XRBaseInteractor>();
-        if (currentInteractor != null)
-        {
-            lastZRotation = currentInteractor.attachTransform.eulerAngles.z;
-            totalRotation = 0f;
-            isFullyRotated = false;
-        }
-    }
-
-    private void OnRelease(SelectExitEventArgs args)
-    {
-        isTracking = false;
-        currentInteractor = null;
+        lastZ = t_HandleGfx.localEulerAngles.z;
     }
 
     void Update()
     {
-        if (!isTracking || currentInteractor == null || isFullyRotated)
-            return;
-             
-        float currentZRotation = currentInteractor.attachTransform.eulerAngles.z;
-        float deltaRotation = Mathf.DeltaAngle(lastZRotation, currentZRotation);
-        lastZRotation = currentZRotation;
+        CheckRotation();
+        CountRotations();
+    }
 
-        totalRotation += deltaRotation;
-
-        if (!isFullyRotated)
+    public void AttachToComponent(bool isTrue)
+    {
+        if (isTrue)
         {
-            if (totalRotation >= requiredRotationDegrees)
+            LeanTween.delayedCall(0.1f, () =>
             {
-                isFullyRotated = true;
-                Debug.Log("🔧 Tool fully rotated clockwise!");
-                RotationCompleted?.Invoke();
-            }
-            else if (totalRotation <= -requiredRotationDegrees)
-            {
-                isFullyRotated = true;
-                Debug.Log("🔧 Tool fully rotated anticlockwise!");
-                RotationCompleted?.Invoke();
-            }
+                xRGrabInteractable.enabled = false;
+                isAttached = true;
+            });
+        }
+        else
+        {
+            isAttached = false;
         }
     }
 
-
-    public void ActivateTracking(bool isTrack)
+    public void CheckRotation()
     {
-        isTracking = isTrack;
+        if (!isAttached && !isToolInteracting) return;
+
+        if (xRController)
+        {
+            float currentYaw = -xRController.localEulerAngles.z;
+
+            if (isFirstFrame)
+            {
+                previousYaw = currentYaw;
+                isFirstFrame = false;
+                return;
+            }
+
+            float deltaYaw = Mathf.DeltaAngle(previousYaw, currentYaw);
+
+            if ((isClockwiseStep && deltaYaw > 0) || (!isClockwiseStep && deltaYaw < 0))
+            {
+                float rotationAmount = -deltaYaw * Time.deltaTime * rotationSpeed;
+
+                // ✅ Rotate on Z-axis
+                t_HandleGfx.Rotate(0f, 0f, rotationAmount);
+
+                // ✅ Move on Z-axis (local space)
+                float moveDirection = -Mathf.Sign(rotationAmount); // +1 or -1
+                float moveAmount = moveDirection * Time.deltaTime * 0.01f; // 🔧 adjust 0.01f as needed
+                t_HandleGfx.Translate(0f, 0f, moveAmount, Space.Self);
+            }
+
+            previousYaw = currentYaw;
+        }
+    }
+
+    private void CountRotations()
+    {
+        float currentZ = t_HandleGfx.localEulerAngles.z;
+        float deltaZ = Mathf.DeltaAngle(lastZ, currentZ);
+
+        totalZRotation += deltaZ;
+        lastZ = currentZ;
+
+        // Count full directional rotations
+        fullRotations = Mathf.Abs(Mathf.FloorToInt(totalZRotation / 360f));
+        if (fullRotations >= requireRotation)
+        {
+            //executeOnRotationComplete?.Invoke();
+            Steps steps = FindObjectOfType<Steps>();
+
+            if (steps && steps.gameObject.activeInHierarchy)
+            {
+                steps.userToolsInteraction();
+            }
+            // Just to test
+            requireRotation = 9999;
+            //
+        }
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("HandController") && isAttached)
+        {
+            isToolInteracting = true;
+            xRController = other.transform;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        isToolInteracting = false;
+        xRController = null;
+        isFirstFrame = true; // Reset to prevent large jump when re-entering
+    }
+
+    public void DebugMassage(string data)
+    {
+        Debug.Log(data);
     }
 }

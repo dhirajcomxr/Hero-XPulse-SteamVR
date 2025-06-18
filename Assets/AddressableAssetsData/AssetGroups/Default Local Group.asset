@@ -21,6 +21,7 @@ MonoBehaviour:
     m_Address: Assets/Prefabs/Modules/Suspension_System_Inspection_(Front and Rear)_RnR.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 4874f490567e2fe42a69daa176ad0cd4, type: 2}
   m_SchemaSet:

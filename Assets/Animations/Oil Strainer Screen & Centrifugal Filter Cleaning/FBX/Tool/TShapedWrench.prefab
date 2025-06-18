@@ -198,8 +198,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0516438, y: 0.04909396, z: 0.37704432}
-  m_Center: {x: -0.00000034097215, y: -0.0000000062317715, z: 0.22236405}
+  m_Size: {x: 0.0516438, y: 0.04909371, z: 0.28499654}
+  m_Center: {x: -0.00000034094964, y: -0.0000000056200484, z: 0.17634016}
 --- !u!65 &7040401011362714217
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -385,8 +385,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ff81a349ddf3848a3bce26629a5f9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requiredRotationDegrees: 720
-  isFullyRotated: 0
+  executeOnRotationComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8437708675337727584}
+        m_TargetAssemblyTypeName: ToolRotationInteraction, Assembly-CSharp
+        m_MethodName: DebugMassage
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Rotation Completed
+          m_BoolArgument: 0
+        m_CallState: 2
+  xRGrabInteractable: {fileID: 1586802896747055024}
+  xRController: {fileID: 0}
+  isAttached: 0
+  isToolInteracting: 0
+  t_HandleGfx: {fileID: 8502722639775561603}
+  controllerRotation: {x: 0, y: 0, z: 0}
+  rotationSpeed: 50
+  requireRotation: 3
+  isClockwiseStep: 0
 --- !u!1 &7491057099518250394
 GameObject:
   m_ObjectHideFlags: 0
