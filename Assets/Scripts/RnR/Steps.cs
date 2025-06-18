@@ -1470,7 +1470,6 @@ public class Steps : MonoBehaviour
             // curAO.speed = 0;
             curAO.speed = skipTo == 0 ? 0 : 10000f;
 
-
         }
     }
     void SetCameraPositionV2(Step s)

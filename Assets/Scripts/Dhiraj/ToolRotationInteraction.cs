@@ -7,6 +7,7 @@ public class ToolRotationInteraction : MonoBehaviour
     public UnityEvent executeOnRotationComplete;
     public XRGrabInteractable xRGrabInteractable;
     public Transform xRController;
+    public GameObject rotatingArrow;
     public bool isAttached = false;
     public bool isToolInteracting = false;
 
@@ -24,6 +25,16 @@ public class ToolRotationInteraction : MonoBehaviour
     private int fullRotations = 0;       // Full 360-degree turns
     private float lastZ;                // Last Z angle of handle
 
+    [Space(5), Header("Reset Positions")]
+    public Transform parantTransform;
+    public Vector3 initialPositionTool;
+    public Vector3 initialRotationTool;
+    public GameObject attachPointGFX;
+
+    void OnEnable()
+    {
+        ResetEverythingOnEnable();
+    }
     void Start()
     {
         lastZ = t_HandleGfx.localEulerAngles.z;
@@ -43,11 +54,13 @@ public class ToolRotationInteraction : MonoBehaviour
             {
                 xRGrabInteractable.enabled = false;
                 isAttached = true;
+                rotatingArrow.SetActive(true);
             });
         }
         else
         {
             isAttached = false;
+            rotatingArrow.SetActive(false);
         }
     }
 
@@ -78,7 +91,7 @@ public class ToolRotationInteraction : MonoBehaviour
                 // ✅ Move on Z-axis (local space)
                 float moveDirection = -Mathf.Sign(rotationAmount); // +1 or -1
                 float moveAmount = moveDirection * Time.deltaTime * 0.01f; // 🔧 adjust 0.01f as needed
-                t_HandleGfx.Translate(0f, 0f, moveAmount, Space.Self);
+                //t_HandleGfx.Translate(0f, 0f, moveAmount, Space.Self);
             }
 
             previousYaw = currentYaw;
@@ -103,10 +116,8 @@ public class ToolRotationInteraction : MonoBehaviour
             if (steps && steps.gameObject.activeInHierarchy)
             {
                 steps.userToolsInteraction();
+                ResetEverythingOnEnable();
             }
-            // Just to test
-            requireRotation = 9999;
-            //
         }
     }
 
@@ -129,5 +140,16 @@ public class ToolRotationInteraction : MonoBehaviour
     public void DebugMassage(string data)
     {
         Debug.Log(data);
+    }
+
+    public void ResetEverythingOnEnable()
+    {
+        transform.parent = parantTransform;
+        transform.localPosition = initialPositionTool;
+        transform.localEulerAngles = initialRotationTool;
+        xRGrabInteractable.enabled = true;
+        isAttached = false;
+        fullRotations = 0;
+        attachPointGFX.SetActive(true);
     }
 }

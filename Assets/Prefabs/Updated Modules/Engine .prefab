@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7437401467695934984
 Transform:
   m_ObjectHideFlags: 0
@@ -355,6 +355,18 @@ PrefabInstance:
       propertyPath: progress
       value: 
       objectReference: {fileID: 1656527461837937961, guid: e6f455a81022eb840bb34bfa77497190, type: 3}
+    - target: {fileID: 867962896462123431, guid: dc5eee965666970438f2056223b4b116, type: 3}
+      propertyPath: steps.Array.data[0].isToolAttached
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 867962896462123431, guid: dc5eee965666970438f2056223b4b116, type: 3}
+      propertyPath: steps.Array.data[0].vr_toolsAttch.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 867962896462123431, guid: dc5eee965666970438f2056223b4b116, type: 3}
+      propertyPath: steps.Array.data[0].objDisableForVR.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4929062753405802064, guid: dc5eee965666970438f2056223b4b116, type: 3}
       propertyPath: outlineTargets.Array.data[0].IsVisible
       value: 0
