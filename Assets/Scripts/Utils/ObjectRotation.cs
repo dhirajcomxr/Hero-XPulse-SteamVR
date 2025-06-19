@@ -11,9 +11,6 @@ public class ObjectRotation : MonoBehaviour {
         scale = transform.localScale;
     }
 
-    private void OnEnable() {
-        isAssembly = false;
-    }
 
     // Update is called once per frame
     void Update() {

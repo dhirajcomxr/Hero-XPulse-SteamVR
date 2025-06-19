@@ -1220,13 +1220,13 @@ public class Steps : MonoBehaviour
                 ToggleHighlight(lpv2.objsToHighlight, true);
                 if (currentProcess == Process.Dismantling)
                 {
-                    ToggleCurvedLineDelay(steps[currentStep].curvedLineObjs, false);
+                    ToggleCurvedLineDelay(steps[currentStep].curvedLineObjs, true);
                     if (currentStep != 0)
                         ToggleCurvedLineDelay(steps[lastStep].curvedLineObjs, false);
                 }
                 else
                 {
-                    ToggleCurvedLineDelay(assemblySteps[currentStep].curvedLineObjs, false);
+                    ToggleCurvedLineDelay(assemblySteps[currentStep].curvedLineObjs, true);
                     if (currentStep != 0)
                         ToggleCurvedLineDelay(assemblySteps[lastStep].curvedLineObjs, false);
                 }
@@ -1275,6 +1275,7 @@ public class Steps : MonoBehaviour
             }
             LocateStepEmpty = false;
         }
+        ToggleCurvedLineDelay(steps[currentStep].curvedLineObjs, true);
         // disable highlight for current step
         /*  if (!keepHighlightForAnimation)
               highlighter.RemoveHighLight();*/
@@ -1610,17 +1611,17 @@ public class Steps : MonoBehaviour
         {
             if (isUsing)
             {
-                /*   foreach (GameObject go in obj)
-                   {
-                       go.GetComponent<IndieMarc.CurvedLine.CurvedLine3D>().refresh_rate = 0.015f;
-                   }*/
+                foreach (GameObject go in obj)
+                {
+                    go.GetComponent<IndieMarc.CurvedLine.CurvedLine3D>().refresh_rate = 0.015f;
+                }
             }
             else
             {
-                /*  foreach (GameObject go in obj)
-                  {
-                      go.GetComponent<IndieMarc.CurvedLine.CurvedLine3D>().refresh_rate = 1f;
-                  }*/
+                foreach (GameObject go in obj)
+                {
+                    go.GetComponent<IndieMarc.CurvedLine.CurvedLine3D>().refresh_rate = 1f;
+                }
             }
         }
     }

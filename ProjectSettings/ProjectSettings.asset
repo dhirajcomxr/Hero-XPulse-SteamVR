@@ -47,7 +47,8 @@ PlayerSettings:
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
-  m_ActiveColorSpace: 0
+  m_ActiveColorSpace: 1
+  unsupportedMSAAFallback: 0
   m_SpriteBatchVertexThreshold: 300
   m_MTRendering: 1
   mipStripping: 0
@@ -75,6 +76,7 @@ PlayerSettings:
   androidMinimumWindowWidth: 400
   androidMinimumWindowHeight: 300
   androidFullscreenMode: 1
+  androidAutoRotationBehavior: 1
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
   runInBackground: 1
@@ -135,6 +137,8 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
+  visionOSBundleVersion: 1.0
+  tvOSBundleVersion: 1.0
   bundleVersion: 0.1
   preloadedAssets: []
   metroInputSource: 0
@@ -147,6 +151,7 @@ PlayerSettings:
   isWsaHolographicRemotingEnabled: 0
   enableFrameTimingStats: 0
   enableOpenGLProfilerGPURecorders: 1
+  allowHDRDisplaySupport: 0
   useHDRDisplay: 0
   hdrBitDepth: 0
   m_ColorGamuts: 00000000
@@ -591,7 +596,7 @@ PlayerSettings:
   switchSocketConcurrencyLimit: 14
   switchScreenResolutionBehavior: 2
   switchUseCPUProfiler: 0
-  switchUseGOLDLinker: 0
+  switchEnableFileSystemTrace: 0
   switchLTOSetting: 0
   switchApplicationID: 0x01004b9000490000
   switchNSODependencies: 
@@ -721,7 +726,6 @@ PlayerSettings:
   switchSocketBufferEfficiency: 4
   switchSocketInitializeEnabled: 1
   switchNetworkInterfaceManagerInitializeEnabled: 1
-  switchPlayerConnectionEnabled: 1
   switchUseNewStyleFilepaths: 0
   switchUseLegacyFmodPriorities: 1
   switchUseMicroSleepForYield: 1
@@ -832,7 +836,7 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: URP_OUTLINE;USE_INPUT_SYSTEM_POSE_CONTROL;URP_OUTLINE
+    Android: URP_OUTLINE;USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS
     CloudRendering: URP_OUTLINE;EPO_DOTWEEN
     EmbeddedLinux: URP_OUTLINE;EPO_DOTWEEN;URP_OUTLINE
     GameCoreScarlett: URP_OUTLINE;EPO_DOTWEEN;URP_OUTLINE
@@ -844,10 +848,10 @@ PlayerSettings:
     PS5: URP_OUTLINE;EPO_DOTWEEN;URP_OUTLINE
     QNX: URP_OUTLINE
     Stadia: URP_OUTLINE;EPO_DOTWEEN;URP_OUTLINE
-    Standalone: URP_OUTLINE;EPO_DOTWEEN;USE_INPUT_SYSTEM_POSE_CONTROL;URP_OUTLINE
+    Standalone: URP_OUTLINE;EPO_DOTWEEN;USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS
     VisionOS: URP_OUTLINE
     WebGL: URP_OUTLINE;EPO_DOTWEEN;URP_OUTLINE
-    Windows Store Apps: URP_OUTLINE;EPO_DOTWEEN;USE_INPUT_SYSTEM_POSE_CONTROL;URP_OUTLINE
+    Windows Store Apps: URP_OUTLINE;EPO_DOTWEEN;USE_INPUT_SYSTEM_POSE_CONTROL;USE_STICK_CONTROL_THUMBSTICKS
     XboxOne: URP_OUTLINE;EPO_DOTWEEN;URP_OUTLINE
     iPhone: URP_OUTLINE;EPO_DOTWEEN;URP_OUTLINE
     tvOS: URP_OUTLINE;EPO_DOTWEEN;URP_OUTLINE

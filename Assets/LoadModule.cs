@@ -2,6 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class ToolAndAttachPoint
+{
+    public string moduleName;
+    public List<GameObject> AttachPoints = new List<GameObject>();
+    public List<ToolRotationInteraction> Tools = new List<ToolRotationInteraction>();
+}
 public class LoadModule : MonoBehaviour
 {
     public GameObject mainBike;
@@ -9,10 +16,13 @@ public class LoadModule : MonoBehaviour
     public GameObject wheelModule;
 
     private GameObject currentModule;
+    public ToolAndAttachPoint[] toolAndAttachPoints;
 
+    private int toolModuleIndex = 0;
     public void LoadBikeModule(int moduleIndex)
     {
         // Unload the previous module if one is already loaded
+        toolModuleIndex = moduleIndex;
         UnloadBikeModule();
 
         GameObject moduleToLoad = null;
@@ -47,8 +57,14 @@ public class LoadModule : MonoBehaviour
     {
         if (currentModule != null)
         {
-            Destroy(currentModule);
+            DestroyImmediate(currentModule);
             currentModule = null;
+            for (int i = 0; i < toolAndAttachPoints[toolModuleIndex].AttachPoints.Count - 1; i++)
+            {
+                toolAndAttachPoints[toolModuleIndex].AttachPoints[i].SetActive(false);
+                toolAndAttachPoints[toolModuleIndex].Tools[i].ResetEverythingOnEnable();
+                toolAndAttachPoints[toolModuleIndex].Tools[i].gameObject.SetActive(false);
+            }
             mainBike.SetActive(true);
         }
     }

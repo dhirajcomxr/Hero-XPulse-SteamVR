@@ -7,7 +7,7 @@ public class ToolRotationInteraction : MonoBehaviour
     public UnityEvent executeOnRotationComplete;
     public XRGrabInteractable xRGrabInteractable;
     public Transform xRController;
-    public GameObject rotatingArrow;
+    public ObjectRotation rotatingArrow;
     public bool isAttached = false;
     public bool isToolInteracting = false;
 
@@ -33,6 +33,7 @@ public class ToolRotationInteraction : MonoBehaviour
 
     void OnEnable()
     {
+        rotatingArrow.isAssembly = isClockwiseStep;
         ResetEverythingOnEnable();
     }
     void Start()
@@ -54,13 +55,13 @@ public class ToolRotationInteraction : MonoBehaviour
             {
                 xRGrabInteractable.enabled = false;
                 isAttached = true;
-                rotatingArrow.SetActive(true);
+                rotatingArrow.gameObject.SetActive(true);
             });
         }
         else
         {
             isAttached = false;
-            rotatingArrow.SetActive(false);
+            rotatingArrow.gameObject.SetActive(false);
         }
     }
 
@@ -117,6 +118,7 @@ public class ToolRotationInteraction : MonoBehaviour
             {
                 steps.userToolsInteraction();
                 ResetEverythingOnEnable();
+                Debug.Log("Error is here");
             }
         }
     }
@@ -144,12 +146,19 @@ public class ToolRotationInteraction : MonoBehaviour
 
     public void ResetEverythingOnEnable()
     {
+        previousYaw = 0;
+        totalZRotation = 0;
+        isFirstFrame = true;
+        t_HandleGfx.localEulerAngles = Vector3.zero;
+        isToolInteracting = false;
+        xRController = null;
         transform.parent = parantTransform;
         transform.localPosition = initialPositionTool;
         transform.localEulerAngles = initialRotationTool;
         xRGrabInteractable.enabled = true;
         isAttached = false;
         fullRotations = 0;
-        attachPointGFX.SetActive(true);
+        rotatingArrow.gameObject.SetActive(false);
+        attachPointGFX.SetActive(true);      
     }
 }
