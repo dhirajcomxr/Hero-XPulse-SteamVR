@@ -12,20 +12,21 @@ public class ToolAndAttachPoint
 public class LoadModule : MonoBehaviour
 {
     public GameObject mainBike;
-    public GameObject engineModule;
-    public GameObject wheelModule;
+    public GameObject[] engineModule;
+    public GameObject[] wheelModule;
 
     private GameObject currentModule;
     public ToolAndAttachPoint[] toolAndAttachPoints;
 
-    private int toolModuleIndex = 0;
+    int toolModuleIndex = 0;
+    GameObject[] moduleToLoad;
     public void LoadBikeModule(int moduleIndex)
     {
         // Unload the previous module if one is already loaded
         toolModuleIndex = moduleIndex;
         UnloadBikeModule();
 
-        GameObject moduleToLoad = null;
+        moduleToLoad = null;
 
         if (moduleIndex == 0)
         {
@@ -39,7 +40,7 @@ public class LoadModule : MonoBehaviour
         if (moduleToLoad != null)
         {
             // Duplicate the module (instantiate a new instance)
-            currentModule = Instantiate(moduleToLoad);
+            currentModule = Instantiate(moduleToLoad[0]);
 
             // Set it as a child of the bike (optional: for organization)
             currentModule.transform.parent = transform;
@@ -49,6 +50,7 @@ public class LoadModule : MonoBehaviour
             currentModule.transform.localRotation = Quaternion.identity; // Reset rotation to avoid offset issues
             // Make sure the module is active
             currentModule.SetActive(true);
+            moduleToLoad[1].SetActive(true);
             mainBike.SetActive(false);
         }
     }
@@ -58,6 +60,7 @@ public class LoadModule : MonoBehaviour
         if (currentModule != null)
         {
             DestroyImmediate(currentModule);
+            moduleToLoad[1].SetActive(false);
             currentModule = null;
             for (int i = 0; i < toolAndAttachPoints[toolModuleIndex].AttachPoints.Count - 1; i++)
             {

@@ -7,7 +7,7 @@ AnimationClip:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Add_Silencer_Bolt_1
-  serializedVersion: 6
+  serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
@@ -28,7 +28,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1
+        time: 0.05
         value: {x: -0.7203, y: 0.2909, z: -0.1312}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -37,7 +37,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 0.11666667
         value: {x: -0.7203, y: 0.2909, z: -0.1312}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -46,7 +46,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 3.5
+        time: 0.5
         value: {x: -0.7203, y: 0.2909, z: -0.1312}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -55,7 +55,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 4.016667
+        time: 1.0166667
         value: {x: -0.7203, y: 0.2909, z: -0.1312}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -64,7 +64,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 5.516667
+        time: 2.5166667
         value: {x: -0.7091, y: 0.3273, z: -0.2138}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -89,7 +89,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1
+        time: 0.05
         value: {x: -0.7174, y: 0.2986, z: -0.1513}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -98,7 +98,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 0.11666667
         value: {x: -0.7174, y: 0.2986, z: -0.1513}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -107,7 +107,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 3.5
+        time: 0.5
         value: {x: -0.7174, y: 0.2986, z: -0.1513}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -116,16 +116,16 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 4.016667
+        time: 1.0166667
         value: {x: -0.74740005, y: 0.322, z: -0.15969999}
-        inSlope: {x: 0, y: 0.033471067, z: -0.016661141}
-        outSlope: {x: 0, y: 0.033471067, z: -0.016661141}
+        inSlope: {x: 0, y: 0.033471074, z: -0.016661143}
+        outSlope: {x: 0, y: 0.033471074, z: -0.016661143}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 5.516667
+        time: 2.5166667
         value: {x: -0.7369, y: 0.36609998, z: -0.25239998}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -139,7 +139,8 @@ AnimationClip:
     path: TShapedWrench_1 1
   m_ScaleCurves: []
   m_FloatCurves:
-  - curve:
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -152,7 +153,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.5
+        time: 0.11666667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -161,7 +162,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 3.5
+        time: 0.5
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -170,7 +171,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 4.016667
+        time: 1.0166667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -185,7 +186,9 @@ AnimationClip:
     path: TShapedWrench_1 1
     classID: 114
     script: {fileID: 11500000, guid: e870059dc3ef8b74693b2f42a029d24f, type: 3}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -198,7 +201,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 3.5
+        time: 0.5
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -207,7 +210,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 4.016667
+        time: 1.0166667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -222,7 +225,9 @@ AnimationClip:
     path: TShapedWrench_1 1
     classID: 1
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -235,7 +240,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.5
+        time: 0.11666667
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -244,7 +249,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 3.5
+        time: 0.5
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -253,7 +258,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 4.016667
+        time: 1.0166667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -268,7 +273,9 @@ AnimationClip:
     path: anticlockwise_rotation (23)
     classID: 1
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -287,7 +294,9 @@ AnimationClip:
     path: anticlockwise_rotation (23)
     classID: 114
     script: {fileID: 11500000, guid: e870059dc3ef8b74693b2f42a029d24f, type: 3}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -300,7 +309,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.5
+        time: 0.11666667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -315,6 +324,7 @@ AnimationClip:
     path: TShapedWrench_1 1
     classID: 114
     script: {fileID: 11500000, guid: e870059dc3ef8b74693b2f42a029d24f, type: 3}
+    flags: 16
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -330,6 +340,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4104923590
       attribute: 1
@@ -337,6 +349,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4104923590
       attribute: 3305885265
@@ -344,6 +358,8 @@ AnimationClip:
       typeID: 114
       customType: 24
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4104923590
       attribute: 2086281974
@@ -351,6 +367,8 @@ AnimationClip:
       typeID: 1
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4100694243
       attribute: 2086281974
@@ -358,6 +376,8 @@ AnimationClip:
       typeID: 1
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4100694243
       attribute: 2165041896
@@ -365,6 +385,8 @@ AnimationClip:
       typeID: 114
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4104923590
       attribute: 2165041896
@@ -372,13 +394,15 @@ AnimationClip:
       typeID: 114
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 5.516667
+    m_StopTime: 2.5166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -394,7 +418,8 @@ AnimationClip:
     m_HeightFromFeet: 0
     m_Mirror: 0
   m_EditorCurves:
-  - curve:
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -407,7 +432,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
+        time: 0.05
         value: -0.7203
         inSlope: 0
         outSlope: 0
@@ -416,7 +441,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 0.11666667
         value: -0.7203
         inSlope: 0
         outSlope: 0
@@ -425,7 +450,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 3.5
+        time: 0.5
         value: -0.7203
         inSlope: 0
         outSlope: 0
@@ -434,7 +459,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 4.016667
+        time: 1.0166667
         value: -0.7203
         inSlope: 0
         outSlope: 0
@@ -443,7 +468,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 5.516667
+        time: 2.5166667
         value: -0.7091
         inSlope: 0
         outSlope: 0
@@ -458,7 +483,9 @@ AnimationClip:
     path: Footrest_Bracket_Bolt (1)
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -471,7 +498,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
+        time: 0.05
         value: 0.2909
         inSlope: 0
         outSlope: 0
@@ -480,7 +507,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 0.11666667
         value: 0.2909
         inSlope: 0
         outSlope: 0
@@ -489,7 +516,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 3.5
+        time: 0.5
         value: 0.2909
         inSlope: 0
         outSlope: 0
@@ -498,7 +525,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 4.016667
+        time: 1.0166667
         value: 0.2909
         inSlope: 0
         outSlope: 0
@@ -507,7 +534,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 5.516667
+        time: 2.5166667
         value: 0.3273
         inSlope: 0
         outSlope: 0
@@ -522,7 +549,9 @@ AnimationClip:
     path: Footrest_Bracket_Bolt (1)
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -535,7 +564,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
+        time: 0.05
         value: -0.1312
         inSlope: 0
         outSlope: 0
@@ -544,7 +573,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 0.11666667
         value: -0.1312
         inSlope: 0
         outSlope: 0
@@ -553,7 +582,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 3.5
+        time: 0.5
         value: -0.1312
         inSlope: 0
         outSlope: 0
@@ -562,7 +591,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 4.016667
+        time: 1.0166667
         value: -0.1312
         inSlope: 0
         outSlope: 0
@@ -571,7 +600,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 5.516667
+        time: 2.5166667
         value: -0.2138
         inSlope: 0
         outSlope: 0
@@ -586,7 +615,9 @@ AnimationClip:
     path: Footrest_Bracket_Bolt (1)
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -599,7 +630,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
+        time: 0.05
         value: -0.7174
         inSlope: 0
         outSlope: 0
@@ -608,7 +639,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 0.11666667
         value: -0.7174
         inSlope: 0
         outSlope: 0
@@ -617,7 +648,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 3.5
+        time: 0.5
         value: -0.7174
         inSlope: 0
         outSlope: 0
@@ -626,7 +657,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 4.016667
+        time: 1.0166667
         value: -0.74740005
         inSlope: 0
         outSlope: 0
@@ -635,7 +666,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 5.516667
+        time: 2.5166667
         value: -0.7369
         inSlope: 0
         outSlope: 0
@@ -650,7 +681,9 @@ AnimationClip:
     path: TShapedWrench_1 1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -663,7 +696,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
+        time: 0.05
         value: 0.2986
         inSlope: 0
         outSlope: 0
@@ -672,7 +705,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 0.11666667
         value: 0.2986
         inSlope: 0
         outSlope: 0
@@ -681,7 +714,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 3.5
+        time: 0.5
         value: 0.2986
         inSlope: 0
         outSlope: 0
@@ -690,16 +723,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 4.016667
+        time: 1.0166667
         value: 0.322
-        inSlope: 0.033471067
-        outSlope: 0.033471067
+        inSlope: 0.033471074
+        outSlope: 0.033471074
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 5.516667
+        time: 2.5166667
         value: 0.36609998
         inSlope: 0
         outSlope: 0
@@ -714,7 +747,9 @@ AnimationClip:
     path: TShapedWrench_1 1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -727,7 +762,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
+        time: 0.05
         value: -0.1513
         inSlope: 0
         outSlope: 0
@@ -736,7 +771,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 0.11666667
         value: -0.1513
         inSlope: 0
         outSlope: 0
@@ -745,7 +780,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 3.5
+        time: 0.5
         value: -0.1513
         inSlope: 0
         outSlope: 0
@@ -754,16 +789,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 4.016667
+        time: 1.0166667
         value: -0.15969999
-        inSlope: -0.016661141
-        outSlope: -0.016661141
+        inSlope: -0.016661143
+        outSlope: -0.016661143
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 5.516667
+        time: 2.5166667
         value: -0.25239998
         inSlope: 0
         outSlope: 0
@@ -778,7 +813,9 @@ AnimationClip:
     path: TShapedWrench_1 1
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -791,7 +828,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.5
+        time: 0.11666667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -800,7 +837,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 3.5
+        time: 0.5
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -809,7 +846,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 4.016667
+        time: 1.0166667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -824,7 +861,9 @@ AnimationClip:
     path: TShapedWrench_1 1
     classID: 114
     script: {fileID: 11500000, guid: e870059dc3ef8b74693b2f42a029d24f, type: 3}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -837,7 +876,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 3.5
+        time: 0.5
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -846,7 +885,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 4.016667
+        time: 1.0166667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -861,7 +900,9 @@ AnimationClip:
     path: TShapedWrench_1 1
     classID: 1
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -874,7 +915,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.5
+        time: 0.11666667
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -883,7 +924,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 3.5
+        time: 0.5
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -892,7 +933,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 4.016667
+        time: 1.0166667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -907,7 +948,9 @@ AnimationClip:
     path: anticlockwise_rotation (23)
     classID: 1
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -926,7 +969,9 @@ AnimationClip:
     path: anticlockwise_rotation (23)
     classID: 114
     script: {fileID: 11500000, guid: e870059dc3ef8b74693b2f42a029d24f, type: 3}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -939,7 +984,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.5
+        time: 0.11666667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -954,6 +999,7 @@ AnimationClip:
     path: TShapedWrench_1 1
     classID: 114
     script: {fileID: 11500000, guid: e870059dc3ef8b74693b2f42a029d24f, type: 3}
+    flags: 16
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0

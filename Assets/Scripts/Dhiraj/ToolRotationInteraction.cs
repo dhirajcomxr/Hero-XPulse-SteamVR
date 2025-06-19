@@ -4,7 +4,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class ToolRotationInteraction : MonoBehaviour
 {
-    public UnityEvent executeOnRotationComplete;
+    //public UnityEvent executeOnRotationComplete;
     public XRGrabInteractable xRGrabInteractable;
     public Transform xRController;
     public ObjectRotation rotatingArrow;
