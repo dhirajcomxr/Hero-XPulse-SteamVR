@@ -31,6 +31,11 @@ public class ToolRotationInteraction : MonoBehaviour
     public Vector3 initialRotationTool;
     public GameObject attachPointGFX;
 
+    public EPOOutline.Outlinable Outlinable;
+    private void Awake()
+    {
+        Outlinable = GetComponent<EPOOutline.Outlinable>();
+    }
     void OnEnable()
     {
         rotatingArrow.isAssembly = isClockwiseStep;
@@ -108,7 +113,7 @@ public class ToolRotationInteraction : MonoBehaviour
         lastZ = currentZ;
 
         // Count full directional rotations
-        fullRotations = Mathf.Abs(Mathf.FloorToInt(totalZRotation / 360f));
+        fullRotations = Mathf.Abs(Mathf.FloorToInt(totalZRotation / 60f));
         if (fullRotations >= requireRotation)
         {
             //executeOnRotationComplete?.Invoke();
@@ -117,7 +122,7 @@ public class ToolRotationInteraction : MonoBehaviour
             if (steps && steps.gameObject.activeInHierarchy)
             {
                 steps.userToolsInteraction();
-                ResetEverythingOnEnable();
+                ResetTool();
                 Debug.Log("Error is here");
             }
         }
@@ -144,10 +149,25 @@ public class ToolRotationInteraction : MonoBehaviour
         Debug.Log(data);
     }
 
-    public void ResetEverythingOnEnable()
+    public void ResetTool()
     {
+        this.gameObject.SetActive(true);
+        t_HandleGfx.localEulerAngles = Vector3.zero;
+        isToolInteracting = false;
+        xRController = null;
+        transform.parent = parantTransform;
+        transform.localPosition = initialPositionTool;
+        transform.localEulerAngles = initialRotationTool;
+        xRGrabInteractable.enabled = true;
+        isAttached = false;
+        if (Outlinable) Outlinable.enabled = false;
+    }
+
+    public void ResetEverythingOnEnable()
+    {        
         previousYaw = 0;
         totalZRotation = 0;
+        lastZ = 0;
         isFirstFrame = true;
         t_HandleGfx.localEulerAngles = Vector3.zero;
         isToolInteracting = false;
@@ -159,6 +179,7 @@ public class ToolRotationInteraction : MonoBehaviour
         isAttached = false;
         fullRotations = 0;
         rotatingArrow.gameObject.SetActive(false);
-        attachPointGFX.SetActive(true);      
+        attachPointGFX.SetActive(true);
+        if (Outlinable) Outlinable.enabled = true;
     }
 }

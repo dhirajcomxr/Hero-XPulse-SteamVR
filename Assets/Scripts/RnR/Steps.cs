@@ -331,7 +331,7 @@ public class Steps : MonoBehaviour
             //GameObject currentProgress = Instantiate(progress, progressGroup);
             GameObject currentProgress = Instantiate(Resources.Load("Toggle", typeof(GameObject)), progressGroup) as GameObject;
             currentProgress.transform.GetChild(1).GetComponent<Text>().text = selectedSteps[i].stepInstructions;
-            currentProgress.transform.GetChild(1).GetComponent<Text>().color = Color.grey;
+            currentProgress.transform.GetChild(1).GetComponent<Text>().color = Color.black;
             currentProgress.GetComponent<SwitchStepState>().IsOn(false);
             loadedStepsInfo.Add(currentProgress);
             //  GameObject currentProgressLine = Instantiate(stepsMgr.divideingLineForStepList, progressGroup);
@@ -476,7 +476,7 @@ public class Steps : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         iTween.PunchScale(stepsMgr.nextBtn, iTween.Hash("amount", Vector3.one * 0.2f, "time", 0.5f, "looptype", "loop"));
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(50f);
         if (stepsMgr.nextBtn.GetComponent<iTween>() != null)
         {
             DestroyImmediate(stepsMgr.nextBtn.GetComponent<iTween>());
@@ -757,7 +757,7 @@ public class Steps : MonoBehaviour
             if (nextStepInfo != null)
             {
                 nextStepInfo.fontStyle = FontStyle.Normal;
-                nextStepInfo.color = Color.grey;
+                nextStepInfo.color = Color.black;
                 nextStepInfo.GetComponentInParent<SwitchStepState>().IsOn(false);
             }
         }
@@ -893,7 +893,7 @@ public class Steps : MonoBehaviour
             if (previousStepInfo != null)
             {
                 previousStepInfo.fontStyle = FontStyle.Normal;
-                previousStepInfo.color = Color.grey;
+                previousStepInfo.color = Color.black;
                 previousStepInfo.GetComponentInParent<SwitchStepState>().IsOn(false);
             }
         }

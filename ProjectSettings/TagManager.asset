@@ -7,11 +7,13 @@ TagManager:
   - RotationIndicator
   - Ground
   - HandController
+  - HandController1
+  - Impact Wrench
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - IgnoreTool
   - Water
   - UI
   - Environment

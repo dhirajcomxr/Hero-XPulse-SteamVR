@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4803644391977663496}
   - component: {fileID: 7067114339781539195}
   - component: {fileID: 888059404056377516}
+  - component: {fileID: 7233276075463502935}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -83,6 +84,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7233276075463502935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1123890396376607228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034bc47afcbf5e141a58d5c20b7808e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2068383342296217838
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +107,7 @@ GameObject:
   - component: {fileID: 9082148076460474662}
   - component: {fileID: 6384727221435103649}
   - component: {fileID: 2985317790485494540}
+  - component: {fileID: 8226467082113820159}
   m_Layer: 0
   m_Name: _10mmHexFemaleSocket
   m_TagString: Untagged
@@ -166,6 +180,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8226467082113820159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068383342296217838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034bc47afcbf5e141a58d5c20b7808e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3120240631417212011
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,6 +234,7 @@ GameObject:
   - component: {fileID: 3578270657495937141}
   - component: {fileID: 6617577661400081729}
   - component: {fileID: 2306939147263689859}
+  - component: {fileID: 6356013058987641481}
   m_Layer: 0
   m_Name: extension_r_216_1__1_
   m_TagString: Untagged
@@ -280,6 +307,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6356013058987641481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6857795209376655963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034bc47afcbf5e141a58d5c20b7808e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7492682259240549830
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,6 +333,7 @@ GameObject:
   - component: {fileID: 6367817874516459064}
   - component: {fileID: 7944665430078610593}
   - component: {fileID: 1410376146747771798}
+  - component: {fileID: 7699554809895946019}
   m_Layer: 0
   m_Name: TShapedWrench_Mid
   m_TagString: Untagged
@@ -438,7 +478,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7699554809895946019}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -554,7 +606,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xRGrabInteractable: {fileID: 7944665430078610593}
   xRController: {fileID: 0}
-  rotatingArrow: {fileID: 5509266404181702800, guid: 05d372927f3bc1e4891b7a720c4651df, type: 3}
+  rotatingArrow: {fileID: 7141964643199342437}
   isAttached: 0
   isToolInteracting: 0
   t_HandleGfx: {fileID: 1415931172307584383}
@@ -566,6 +618,96 @@ MonoBehaviour:
   initialPositionTool: {x: -1.46, y: -0.001, z: 0.889}
   initialRotationTool: {x: 0, y: 0, z: 270}
   attachPointGFX: {fileID: 0}
+  Outlinable: {fileID: 7699554809895946019}
+--- !u!114 &7699554809895946019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7492682259240549830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe91dc294731a9428c0941ea7579110, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  complexMaskingMode: 0
+  drawingMode: 1
+  outlineLayer: 0
+  outlineTargets:
+  - IsVisible: 1
+    CutoutMask: 8
+    edgeDilateAmount: 5
+    frontEdgeDilateAmount: 5
+    backEdgeDilateAmount: 5
+    renderer: {fileID: 888059404056377516}
+    SubmeshIndex: 0
+    BoundsMode: 0
+    Bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0.5, z: 0.5}
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    DilateRenderingMode: 0
+    cutoutTextureIndex: 0
+  - IsVisible: 1
+    CutoutMask: 8
+    edgeDilateAmount: 5
+    frontEdgeDilateAmount: 5
+    backEdgeDilateAmount: 5
+    renderer: {fileID: 2306939147263689859}
+    SubmeshIndex: 0
+    BoundsMode: 0
+    Bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0.5, z: 0.5}
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    DilateRenderingMode: 0
+    cutoutTextureIndex: 0
+  - IsVisible: 1
+    CutoutMask: 8
+    edgeDilateAmount: 5
+    frontEdgeDilateAmount: 5
+    backEdgeDilateAmount: 5
+    renderer: {fileID: 2985317790485494540}
+    SubmeshIndex: 0
+    BoundsMode: 0
+    Bounds:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0.5, z: 0.5}
+    CutoutThreshold: 0.5
+    CullMode: 2
+    cutoutTextureName: 
+    DilateRenderingMode: 0
+    cutoutTextureIndex: 0
+  renderStyle: 1
+  outlineParameters:
+    enabled: 1
+    color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    dilateShift: 1
+    blurShift: 1
+    fillPass:
+      shader: {fileID: 0}
+      serializedProperties: []
+  backParameters:
+    enabled: 1
+    color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    dilateShift: 1
+    blurShift: 1
+    fillPass:
+      shader: {fileID: 0}
+      serializedProperties: []
+  frontParameters:
+    enabled: 1
+    color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+    dilateShift: 1
+    blurShift: 1
+    fillPass:
+      shader: {fileID: 0}
+      serializedProperties: []
 --- !u!1 &7839223434864165186
 GameObject:
   m_ObjectHideFlags: 0
@@ -703,10 +845,41 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2942399331155745163, guid: 6745c11db0bd0ab479387eaa88c53ec1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5319532321315203655}
   m_SourcePrefab: {fileID: 100100000, guid: 6745c11db0bd0ab479387eaa88c53ec1, type: 3}
+--- !u!114 &7141964643199342437 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2942399331155745161, guid: 6745c11db0bd0ab479387eaa88c53ec1, type: 3}
+  m_PrefabInstance: {fileID: 5460856006897127148}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7141964643199342439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e870059dc3ef8b74693b2f42a029d24f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &7141964643199342438 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2942399331155745162, guid: 6745c11db0bd0ab479387eaa88c53ec1, type: 3}
   m_PrefabInstance: {fileID: 5460856006897127148}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7141964643199342439 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2942399331155745163, guid: 6745c11db0bd0ab479387eaa88c53ec1, type: 3}
+  m_PrefabInstance: {fileID: 5460856006897127148}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5319532321315203655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7141964643199342439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034bc47afcbf5e141a58d5c20b7808e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
