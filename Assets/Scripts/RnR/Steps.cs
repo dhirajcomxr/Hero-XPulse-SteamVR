@@ -370,7 +370,8 @@ public class Steps : MonoBehaviour
             float time = info.normalizedTime % 1;
             if (time > 0.995f && !triggeredNext)
             {
-                StartCoroutine(HighlightNextBtn());
+                //Dhiraj : I have disabled this to fix next button blinking bug
+                //StartCoroutine(HighlightNextBtn());
                 triggeredNext = true;
                 currentAnim = null;
                 //StartCoroutine(SkipToNext(0.5f));
@@ -1444,7 +1445,7 @@ public class Steps : MonoBehaviour
 
         //  stepsMgr.nextBtn.SetActive(true);
         stepsMgr.nextBtn.GetComponent<Button>().interactable = true;
-
+        stepsMgr.ControlNextButtonAnimation(true);
         // currentStep++;
     }
     void AnimRewind(Step thisStep) => SkipAnim(thisStep, 0);
@@ -1965,7 +1966,8 @@ public class Steps : MonoBehaviour
             }
             else
             {
-                StartCoroutine(HighlightNextBtn(1f));
+                //Dhiraj : I have disabled this to fix next button blinking bug
+                //StartCoroutine(HighlightNextBtn(1f));
                 StartCoroutine(SkipToNext(textDuration));
             }
         }
@@ -1993,7 +1995,8 @@ public class Steps : MonoBehaviour
             }
             else
             {
-                StartCoroutine(HighlightNextBtn(1f));
+                //Dhiraj : I have disabled this to fix next button blinking bug
+                //StartCoroutine(HighlightNextBtn(1f));
                 StartCoroutine(SkipToNext(textDuration));
             }
         }

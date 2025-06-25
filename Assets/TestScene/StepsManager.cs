@@ -76,37 +76,42 @@ public class StepsManager : MonoBehaviour {
     public GameObject sidepanel;
 
 
-   /* public void LineRopeInSteps()
-    {
-        foreach (Step st in existingStepScripts.steps)
-        {
-            if (st.curvedLineObjs.Length > 0)
-            {
-                for (int i = 0; i < st.curvedLineObjs.Length; i++)
-                {
-                    if (st.curvedLineObjs[i] != null)
-                    {
-                        GameObject newLineRope = new GameObject();
-                        newLineRope.transform.localScale = Vector3.one;
-                        newLineRope.AddComponent<CurvedLine3D>();
-                        newLineRope.GetComponent<CurvedLine3D>().paths = st.curvedLineObjs[i].GetComponent<CurvedLine3D>().paths;
-                        newLineRope.GetComponent<CurvedLine3D>().material = st.curvedLineObjs[i].GetComponent<CurvedLine3D>().material;
-                        newLineRope.GetComponent<CurvedLine3D>().shape = st.curvedLineObjs[i].GetComponent<CurvedLine3D>().shape;
-                        newLineRope.GetComponent<CurvedLine3D>().precision = st.curvedLineObjs[i].GetComponent<CurvedLine3D>().precision;
-                        newLineRope.GetComponent<CurvedLine3D>().radius = st.curvedLineObjs[i].GetComponent<CurvedLine3D>().radius;
-                        newLineRope.GetComponent<CurvedLine3D>().refresh_rate = 1;
-                        newLineRope.GetComponent<CurvedLine3D>().NewMesh();
-                       // newLineRope.transform.position = st.curvedLineObjs[i].transform.localPosition;
-                     //   newLineRope.transform.rotation = Quaternion.Euler(st.curvedLineObjs[i].transform.rotation.x, st.curvedLineObjs[i].transform.rotation.y, st.curvedLineObjs[i].transform.rotation.z);
-                        st.curvedLineObjs[i].GetComponent<MeshRenderer>().enabled = false;
-                        NewLineRopes.Add(newLineRope);
-                        NewLineRopesRadius = newLineRope.GetComponent<CurvedLine3D>().radius;
-                    }
-                }
-            }
-        }
-    }*/
+    /* public void LineRopeInSteps()
+     {
+         foreach (Step st in existingStepScripts.steps)
+         {
+             if (st.curvedLineObjs.Length > 0)
+             {
+                 for (int i = 0; i < st.curvedLineObjs.Length; i++)
+                 {
+                     if (st.curvedLineObjs[i] != null)
+                     {
+                         GameObject newLineRope = new GameObject();
+                         newLineRope.transform.localScale = Vector3.one;
+                         newLineRope.AddComponent<CurvedLine3D>();
+                         newLineRope.GetComponent<CurvedLine3D>().paths = st.curvedLineObjs[i].GetComponent<CurvedLine3D>().paths;
+                         newLineRope.GetComponent<CurvedLine3D>().material = st.curvedLineObjs[i].GetComponent<CurvedLine3D>().material;
+                         newLineRope.GetComponent<CurvedLine3D>().shape = st.curvedLineObjs[i].GetComponent<CurvedLine3D>().shape;
+                         newLineRope.GetComponent<CurvedLine3D>().precision = st.curvedLineObjs[i].GetComponent<CurvedLine3D>().precision;
+                         newLineRope.GetComponent<CurvedLine3D>().radius = st.curvedLineObjs[i].GetComponent<CurvedLine3D>().radius;
+                         newLineRope.GetComponent<CurvedLine3D>().refresh_rate = 1;
+                         newLineRope.GetComponent<CurvedLine3D>().NewMesh();
+                        // newLineRope.transform.position = st.curvedLineObjs[i].transform.localPosition;
+                      //   newLineRope.transform.rotation = Quaternion.Euler(st.curvedLineObjs[i].transform.rotation.x, st.curvedLineObjs[i].transform.rotation.y, st.curvedLineObjs[i].transform.rotation.z);
+                         st.curvedLineObjs[i].GetComponent<MeshRenderer>().enabled = false;
+                         NewLineRopes.Add(newLineRope);
+                         NewLineRopesRadius = newLineRope.GetComponent<CurvedLine3D>().radius;
+                     }
+                 }
+             }
+         }
+     }*/
 
+    public GameObject nextButtonHighlight;
+    public void ControlNextButtonAnimation(bool isOff)
+    {
+        nextButtonHighlight.SetActive(isOff);
+    }
     public void clickOnNextOrPreviousButton()
     {
         if (Caution_Text.text == "")

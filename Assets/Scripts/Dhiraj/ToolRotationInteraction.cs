@@ -41,7 +41,7 @@ public class ToolRotationInteraction : MonoBehaviour
     void OnEnable()
     {
         rotatingArrow.isAssembly = isClockwiseStep;
-        //ResetEverythingOnEnable();
+        ResetEverythingOnEnable();
     }
     void Start()
     {
@@ -50,12 +50,8 @@ public class ToolRotationInteraction : MonoBehaviour
 
     void Update()
     {
-        if (!isLocked || !isSpanner) CheckRotation();
-        if(!isLocked || !isSpanner) CountRotations();
-        if (isSpanner)
-        {
-
-        }
+        if (!isLocked) CheckRotation();
+        if(!isLocked) CountRotations();
 
     }
 

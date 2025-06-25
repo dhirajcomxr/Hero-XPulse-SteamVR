@@ -26,7 +26,7 @@ public class ObjectMoverInteraction : MonoBehaviour
                 CheckTargetReached();
             }
 
-            UpdateRotation(); // Always update rotation based on position
+            //UpdateRotation(); // Always update rotation based on position
         }
     }
 
@@ -195,7 +195,7 @@ public class ObjectMoverInteraction : MonoBehaviour
             xRController = other.transform;
             isInteracting = isInteractingRight = true;
             previousControllerPosition = xRController.localPosition;
-            initialObjectX = transform.localPosition.x; // Save reference position
+            //initialObjectX = transform.localPosition.x; // Save reference position
         }
     }
 

@@ -13340,6 +13340,7 @@ GameObject:
   - component: {fileID: 2552856584042507000}
   - component: {fileID: 2865743706427360004}
   - component: {fileID: 2868220119513486466}
+  - component: {fileID: 350984471238925432}
   m_Layer: 0
   m_Name: front_wheel R
   m_TagString: Untagged
@@ -13634,6 +13635,20 @@ MonoBehaviour:
   T_T: 0
   isInteractingLeft: 0
   isInteractingRight: 0
+--- !u!114 &350984471238925432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2414215515239128586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce038183933cc0c4ab5cde528841f7d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheel: {fileID: 2423931693032454996}
+  rotationSpeed: 270
 --- !u!1 &2428951796158382917
 GameObject:
   m_ObjectHideFlags: 0
@@ -34531,6 +34546,29 @@ MonoBehaviour:
     objDisableForVR:
     - {fileID: 0}
     - {fileID: 0}
+  - locateObjectText: 
+    stepInstructions: Process Completed
+    specialToolName: 
+    animatedObject: {fileID: 0}
+    animTriggerName: 
+    debugStepNum: 0
+    lookAtPoint: {fileID: 0}
+    overrideCameraPosition: {fileID: 0}
+    isLocked: 0
+    objsToHighlight: []
+    objsToDisable: []
+    objsToEnable: []
+    objsToE_D: []
+    curvedLineObjs: []
+    cautionNotes: 'Tool : T-Handle'
+    voiceOver: {fileID: 0}
+    torque: 
+    toolSprite: []
+    isUserinteraction: 0
+    vr_Interactable: {fileID: 0}
+    isToolAttached: 0
+    vr_toolsAttch: []
+    objDisableForVR: []
   assemblySteps: []
   stepsMgr: {fileID: 0}
   partLocated: 0
@@ -51341,6 +51379,7 @@ GameObject:
   - component: {fileID: 6352682433593549856}
   - component: {fileID: 2931760773490957595}
   - component: {fileID: 9005275694123783443}
+  - component: {fileID: 4205271466514882116}
   m_Layer: 0
   m_Name: front_wheel A
   m_TagString: Untagged
@@ -51635,6 +51674,20 @@ MonoBehaviour:
   T_T: 0
   isInteractingLeft: 0
   isInteractingRight: 0
+--- !u!114 &4205271466514882116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8813955784043463317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce038183933cc0c4ab5cde528841f7d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheel: {fileID: 5543994121383712223}
+  rotationSpeed: 270
 --- !u!1 &8815578908686899291
 GameObject:
   m_ObjectHideFlags: 0
