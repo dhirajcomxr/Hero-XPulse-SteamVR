@@ -50,27 +50,12 @@ public class ToolRotationInteraction : MonoBehaviour
 
     void Update()
     {
-        if (!isLocked) CheckRotation();
+        if(!isLocked) CheckRotation();
         if(!isLocked) CountRotations();
 
     }
 
 
-    public void SpannerRotation()
-    {
-        if (!isAttached && !isToolInteracting) return;
-        if (xRController)
-        {
-            if (isClockwiseStep)
-            {
-
-            }
-            else
-            {
-
-            }
-        }
-    }
     public void AttachToComponent(bool isTrue)
     {
         if (isTrue)
@@ -183,7 +168,7 @@ public class ToolRotationInteraction : MonoBehaviour
     }
 
     public void ResetEverythingOnEnable()
-    {        
+    {
         previousYaw = 0;
         totalZRotation = 0;
         lastZ = 0;

@@ -845,18 +845,22 @@ public class Steps : MonoBehaviour
             if (steps[currentStep - 1].isToolAttached == true)
             {
                 ToggleObjects(steps[currentStep - 1].objDisableForVR, false);
-                for (int i = 0; i < steps[currentStep + 1].vr_toolsAttch.Length; i++)
+                if (steps[currentStep].vr_toolsAttch.Length > 0)
                 {
-
-                    if (steps[currentStep + 1].vr_toolsAttch[i].tag == "tool")
+                    for (int i = 0; i < steps[currentStep].vr_toolsAttch.Length; i++)
                     {
-                        steps[currentStep + 1].vr_toolsAttch[i].transform.position = stepsMgr.toolSpwanPos.position;
-                        steps[currentStep + 1].vr_toolsAttch[i].transform.localRotation = stepsMgr.toolSpwanPos.localRotation;
+
+                        if (steps[currentStep].vr_toolsAttch[i].tag == "tool")
+                        {
+                            steps[currentStep].vr_toolsAttch[i].transform.position = stepsMgr.toolSpwanPos.position;
+                            steps[currentStep].vr_toolsAttch[i].transform.localRotation = stepsMgr.toolSpwanPos.localRotation;
+                        }
+
+                        steps[currentStep].vr_toolsAttch[i].SetActive(false);
+
                     }
-
-                    steps[currentStep + 1].vr_toolsAttch[i].SetActive(false);
-
                 }
+               
             }
         }
 

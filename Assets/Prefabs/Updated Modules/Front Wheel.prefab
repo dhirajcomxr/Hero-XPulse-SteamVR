@@ -711,7 +711,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3333316068365807765
 Transform:
   m_ObjectHideFlags: 0
@@ -17162,7 +17162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8077189257758462942
 Transform:
   m_ObjectHideFlags: 0
@@ -30486,7 +30486,6 @@ GameObject:
   - component: {fileID: 3342770606934195468}
   - component: {fileID: 7193312158968168761}
   - component: {fileID: 5248994806550343037}
-  - component: {fileID: 2691411637981417275}
   - component: {fileID: 6137929059894154684}
   m_Layer: 0
   m_Name: Calliper_Piston (1)
@@ -30560,29 +30559,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &2691411637981417275
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5177854507308451968}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!114 &6137929059894154684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32372,8 +32348,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5703432081163646258}
-  - component: {fileID: 2657848108389970130}
-  - component: {fileID: 3824115571043001772}
   m_Layer: 0
   m_Name: Wheel Target Attach
   m_TagString: Untagged
@@ -32396,87 +32370,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5023167998018859005}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2657848108389970130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5580790338866065571}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
-  m_InteractionLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_InteractionLayers:
-    m_Bits: 4294967295
-  m_AttachTransform: {fileID: 5703432081163646258}
-  m_KeepSelectedTargetValid: 1
-  m_DisableVisualsWhenBlockedInGroup: 1
-  m_StartingSelectedInteractable: {fileID: 0}
-  m_StartingTargetFilter: {fileID: 0}
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_StartingHoverFilters: []
-  m_StartingSelectFilters: []
-  m_OnHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ShowInteractableHoverMeshes: 1
-  m_InteractableHoverMeshMaterial: {fileID: 0}
-  m_InteractableCantHoverMeshMaterial: {fileID: 0}
-  m_SocketActive: 1
-  m_InteractableHoverScale: 1
-  m_RecycleDelayTime: 1
-  m_HoverSocketSnapping: 0
-  m_SocketSnappingRadius: 0.1
-  m_SocketScaleMode: 0
-  m_FixedScale: {x: 1, y: 1, z: 1}
-  m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!65 &3824115571043001772
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5580790338866065571}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.8339438, y: 1.8339438, z: 0.32890117}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5588280919914470574
 GameObject:
   m_ObjectHideFlags: 0
@@ -34260,29 +34153,6 @@ MonoBehaviour:
   animSpeed: 3
   textDuration: 1
   steps:
-  - locateObjectText: 
-    stepInstructions: Click on next to start process.
-    specialToolName: 
-    animatedObject: {fileID: 0}
-    animTriggerName: 
-    debugStepNum: 0
-    lookAtPoint: {fileID: 0}
-    overrideCameraPosition: {fileID: 0}
-    isLocked: 0
-    objsToHighlight: []
-    objsToDisable: []
-    objsToEnable: []
-    objsToE_D: []
-    curvedLineObjs: []
-    cautionNotes: 'Tool : T-Handle'
-    voiceOver: {fileID: 0}
-    torque: 
-    toolSprite: []
-    isUserinteraction: 0
-    vr_Interactable: {fileID: 0}
-    isToolAttached: 0
-    vr_toolsAttch: []
-    objDisableForVR: []
   - locateObjectText: Locate the Wheel Speed Sensor
     stepInstructions: Remove the wheel speed sensor bolt.
     specialToolName: 
@@ -34386,7 +34256,7 @@ MonoBehaviour:
     vr_toolsAttch: []
     objDisableForVR:
     - {fileID: 187688273828138749}
-  - locateObjectText: Locate the Front Axle Nut
+  - locateObjectText: Remove Wheel
     stepInstructions: Remove the wheel, and side collars from both the sides of the
       wheel.
     specialToolName: 
@@ -34411,7 +34281,7 @@ MonoBehaviour:
     isToolAttached: 1
     vr_toolsAttch: []
     objDisableForVR: []
-  - locateObjectText: Locate the Wheel
+  - locateObjectText: Install Wheel
     stepInstructions: "Place the wheel between the front forks. When installing the
       wheel, carefully fit the brake disc between the brake pads to avoid damage
       to the pads.\t\t\t"
@@ -34540,9 +34410,7 @@ MonoBehaviour:
     isUserinteraction: 0
     vr_Interactable: {fileID: 0}
     isToolAttached: 1
-    vr_toolsAttch:
-    - {fileID: 0}
-    - {fileID: 0}
+    vr_toolsAttch: []
     objDisableForVR:
     - {fileID: 0}
     - {fileID: 0}
@@ -34551,7 +34419,7 @@ MonoBehaviour:
     specialToolName: 
     animatedObject: {fileID: 0}
     animTriggerName: 
-    debugStepNum: 0
+    debugStepNum: 10
     lookAtPoint: {fileID: 0}
     overrideCameraPosition: {fileID: 0}
     isLocked: 0
@@ -34560,15 +34428,17 @@ MonoBehaviour:
     objsToEnable: []
     objsToE_D: []
     curvedLineObjs: []
-    cautionNotes: 'Tool : T-Handle'
+    cautionNotes: 
     voiceOver: {fileID: 0}
     torque: 
     toolSprite: []
     isUserinteraction: 0
     vr_Interactable: {fileID: 0}
     isToolAttached: 0
-    vr_toolsAttch: []
-    objDisableForVR: []
+    vr_toolsAttch:
+    - {fileID: 1408952990569937812}
+    objDisableForVR:
+    - {fileID: 1408952990569937812}
   assemblySteps: []
   stepsMgr: {fileID: 0}
   partLocated: 0
@@ -43196,8 +43066,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7194141161756117470}
-  - component: {fileID: 5385865063836001519}
-  - component: {fileID: 2624234638390372757}
   m_Layer: 0
   m_Name: Wheel Target Remove
   m_TagString: Untagged
@@ -43220,87 +43088,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5023167998018859005}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5385865063836001519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7431751095250613744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
-  m_InteractionLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_InteractionLayers:
-    m_Bits: 4294967295
-  m_AttachTransform: {fileID: 7194141161756117470}
-  m_KeepSelectedTargetValid: 1
-  m_DisableVisualsWhenBlockedInGroup: 1
-  m_StartingSelectedInteractable: {fileID: 0}
-  m_StartingTargetFilter: {fileID: 0}
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_StartingHoverFilters: []
-  m_StartingSelectFilters: []
-  m_OnHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ShowInteractableHoverMeshes: 1
-  m_InteractableHoverMeshMaterial: {fileID: 0}
-  m_InteractableCantHoverMeshMaterial: {fileID: 0}
-  m_SocketActive: 1
-  m_InteractableHoverScale: 1
-  m_RecycleDelayTime: 1
-  m_HoverSocketSnapping: 0
-  m_SocketSnappingRadius: 0.1
-  m_SocketScaleMode: 0
-  m_FixedScale: {x: 1, y: 1, z: 1}
-  m_TargetBoundsSize: {x: 1, y: 1, z: 1}
---- !u!65 &2624234638390372757
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7431751095250613744}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.8339438, y: 1.8339438, z: 0.32890117}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7433070776186758572
 GameObject:
   m_ObjectHideFlags: 0
