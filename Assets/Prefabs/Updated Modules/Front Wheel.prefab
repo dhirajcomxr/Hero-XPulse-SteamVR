@@ -34179,8 +34179,8 @@ MonoBehaviour:
     objDisableForVR:
     - {fileID: 0}
     - {fileID: 0}
-  - locateObjectText: Locate the Wheel Speed Sensor
-    stepInstructions: Disconnect the wheel speed sensor.
+  - locateObjectText: Remove the Wheel Speed Sensor
+    stepInstructions: Disconnect and Remove the wheel speed sensor.
     specialToolName: 
     animatedObject: {fileID: 6710081613933599305}
     animTriggerName: Remove Speed sensor
@@ -34220,7 +34220,7 @@ MonoBehaviour:
     objsToEnable: []
     objsToE_D: []
     curvedLineObjs: []
-    cautionNotes: 'Tool : T-Handle'
+    cautionNotes: 'Tool : Ring Spanner or Power handle with socket'
     voiceOver: {fileID: 0}
     torque: 
     toolSprite: []
@@ -34256,9 +34256,8 @@ MonoBehaviour:
     vr_toolsAttch: []
     objDisableForVR:
     - {fileID: 187688273828138749}
-  - locateObjectText: Remove Wheel
-    stepInstructions: Remove the wheel, and side collars from both the sides of the
-      wheel.
+  - locateObjectText: Remove the front wheel
+    stepInstructions: Carefully remove the front wheel along collars from both sides
     specialToolName: 
     animatedObject: {fileID: 6710081613933599305}
     animTriggerName: Remove Wheel
@@ -34281,10 +34280,10 @@ MonoBehaviour:
     isToolAttached: 1
     vr_toolsAttch: []
     objDisableForVR: []
-  - locateObjectText: Install Wheel
-    stepInstructions: "Place the wheel between the front forks. When installing the
-      wheel, carefully fit the brake disc between the brake pads to avoid damage
-      to the pads.\t\t\t"
+  - locateObjectText: Install the Wheel
+    stepInstructions: Place the wheel between the front forks. When installing the
+      wheel carefully fit the brake disc between the brake pads to avoid damage to
+      the pads.
     specialToolName: 
     animatedObject: {fileID: 6710081613933599305}
     animTriggerName: Install Wheel
@@ -34307,7 +34306,7 @@ MonoBehaviour:
     isToolAttached: 1
     vr_toolsAttch: []
     objDisableForVR: []
-  - locateObjectText: Locate the Front Axle Nut
+  - locateObjectText: Install the Front Axle Nut
     stepInstructions: Insert the front axle nut from the left side of the wheel in
       the groove.
     specialToolName: 
@@ -34333,8 +34332,9 @@ MonoBehaviour:
     vr_toolsAttch: []
     objDisableForVR:
     - {fileID: 187688273828138749}
-  - locateObjectText: Locate the Front Axle Nut
-    stepInstructions: Tighten the front axle nut to the specified torque.
+  - locateObjectText: Tighten the Front Axle Nut
+    stepInstructions: Tighten the front axle nut to the specified torque by holding
+      the bolt from right side
     specialToolName: 
     animatedObject: {fileID: 6710081613933599305}
     animTriggerName: Install Allen key bolts
@@ -34348,7 +34348,7 @@ MonoBehaviour:
     objsToEnable: []
     objsToE_D: []
     curvedLineObjs: []
-    cautionNotes: 'Tool : T-Handle'
+    cautionNotes: 'Tool : Ring Spanner or Power handle with socket'
     voiceOver: {fileID: 0}
     torque: 
     toolSprite: []
@@ -34414,12 +34414,40 @@ MonoBehaviour:
     objDisableForVR:
     - {fileID: 0}
     - {fileID: 0}
+  - locateObjectText: Remove the vehicle support
+    stepInstructions: 'Carefully remove the vehicle support before moving the vehicle
+      from the ramp '
+    specialToolName: 
+    animatedObject: {fileID: 6710081613933599305}
+    animTriggerName: Install Speed sensor bolt
+    debugStepNum: 10
+    lookAtPoint: {fileID: 0}
+    overrideCameraPosition: {fileID: 0}
+    isLocked: 1
+    objsToHighlight:
+    - {fileID: 2113742508500037827}
+    objsToDisable: []
+    objsToEnable: []
+    objsToE_D: []
+    curvedLineObjs:
+    - {fileID: 8198777700988503187}
+    cautionNotes: Scissor Jack Or Wooden Block
+    voiceOver: {fileID: 0}
+    torque: 
+    toolSprite: []
+    isUserinteraction: 0
+    vr_Interactable: {fileID: 0}
+    isToolAttached: 1
+    vr_toolsAttch: []
+    objDisableForVR:
+    - {fileID: 0}
+    - {fileID: 0}
   - locateObjectText: 
     stepInstructions: Process Completed
     specialToolName: 
     animatedObject: {fileID: 0}
     animTriggerName: 
-    debugStepNum: 10
+    debugStepNum: 11
     lookAtPoint: {fileID: 0}
     overrideCameraPosition: {fileID: 0}
     isLocked: 0
