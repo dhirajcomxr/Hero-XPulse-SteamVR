@@ -76,6 +76,7 @@ public class ObjectMoverInteraction : MonoBehaviour
         }
     }
 
+    public float T_T;
     /*private void UpdateRotation()
     {
         if (!gfx) return;
@@ -92,6 +93,7 @@ public class ObjectMoverInteraction : MonoBehaviour
                 gfx.localEulerAngles.y,
                 Mathf.Lerp(0f, -30f, t) // Rotate 0 → -30
             );
+
         }
         else
         {
@@ -102,9 +104,11 @@ public class ObjectMoverInteraction : MonoBehaviour
                 gfx.localEulerAngles.y,
                 Mathf.Lerp(-30f, 0f, t) // Rotate -30 → 0
             );
+            
         }
+        T_T = t;
+        Debug.Log($"Testing : {T_T}::{gfx.localRotation.z}");
     }*/
-
     private void UpdateRotation()
     {
         if (!gfx) return;
@@ -114,25 +118,63 @@ public class ObjectMoverInteraction : MonoBehaviour
 
         if (isPositiveDirection)
         {
-            t = Mathf.InverseLerp(0f, targetLocalX, currentX);
+            // Assume we're moving from x = 0 → x = 1
+            t = Mathf.InverseLerp(0f, 1f, currentX);
             t = Mathf.Clamp01(t);
 
-            Quaternion fromRotation = Quaternion.Euler(gfx.localEulerAngles.x, gfx.localEulerAngles.y, 0f);
-            Quaternion toRotation = Quaternion.Euler(gfx.localEulerAngles.x, gfx.localEulerAngles.y, -30f);
-            gfx.localRotation = Quaternion.Lerp(fromRotation, toRotation, t);
+            gfx.localEulerAngles = new Vector3(
+                gfx.localEulerAngles.x,
+                gfx.localEulerAngles.y,
+                Mathf.Lerp(0f, -30f, t)
+            );
         }
         else
         {
-            t = Mathf.InverseLerp(targetLocalX, 0f, currentX);
+            // Assume we're moving from x = 1 → x = 0
+            t = Mathf.InverseLerp(1f, 0f, currentX);
             t = Mathf.Clamp01(t);
 
-            Quaternion fromRotation = Quaternion.Euler(gfx.localEulerAngles.x, gfx.localEulerAngles.y, -30f);
-            Quaternion toRotation = Quaternion.Euler(gfx.localEulerAngles.x, gfx.localEulerAngles.y, 0f);
-            gfx.localRotation = Quaternion.Lerp(fromRotation, toRotation, t);
+            gfx.localEulerAngles = new Vector3(
+                gfx.localEulerAngles.x,
+                gfx.localEulerAngles.y,
+                Mathf.Lerp(-30f, 0f, t)
+            );
         }
 
-        Debug.Log($"[Rotation] isPositive: {isPositiveDirection}, currentX: {currentX}, t: {t}, Z: {gfx.localEulerAngles.z}");
+        Debug.Log($"[Rotation] Direction: {(isPositiveDirection ? "Right" : "Left")}, X: {currentX}, t: {t}");
     }
+
+
+    /*    private void UpdateRotation()
+        {
+            if (!gfx) return;
+
+            float currentX = transform.localPosition.x;
+            float t;
+
+            if (isPositiveDirection)
+            {
+                t = Mathf.InverseLerp(0f, targetLocalX, currentX);
+                t = Mathf.Clamp01(t);
+
+                Quaternion fromRotation = Quaternion.Euler(gfx.localEulerAngles.x, gfx.localEulerAngles.y, 0f);
+                Quaternion toRotation = Quaternion.Euler(gfx.localEulerAngles.x, gfx.localEulerAngles.y, -30f);
+                gfx.localRotation = Quaternion.Lerp(fromRotation, toRotation, t);
+            }
+            else
+            {
+                t = Mathf.InverseLerp(targetLocalX, 0f, currentX);
+                t = Mathf.Clamp01(t);
+
+                Quaternion fromRotation = Quaternion.Euler(gfx.localEulerAngles.x, gfx.localEulerAngles.y, -30f);
+                Quaternion toRotation = Quaternion.Euler(gfx.localEulerAngles.x, gfx.localEulerAngles.y, 0f);
+                gfx.localRotation = Quaternion.Lerp(fromRotation, toRotation, t);
+
+                Debug.Log($"Testing : {gfx.localRotation.z}");
+            }
+
+            //Debug.Log($"[Rotation] isPositive: {isPositiveDirection}, currentX: {currentX}, t: {t}, Z: {gfx.localEulerAngles.z}");
+        }*/
 
 
 
@@ -153,6 +195,7 @@ public class ObjectMoverInteraction : MonoBehaviour
             xRController = other.transform;
             isInteracting = isInteractingRight = true;
             previousControllerPosition = xRController.localPosition;
+            initialObjectX = transform.localPosition.x; // Save reference position
         }
     }
 

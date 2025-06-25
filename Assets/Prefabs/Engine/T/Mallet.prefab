@@ -617,44 +617,12 @@ MonoBehaviour:
   drawingMode: 1
   outlineLayer: 0
   outlineTargets:
-  - IsVisible: 0
+  - IsVisible: 1
     CutoutMask: 8
     edgeDilateAmount: 5
     frontEdgeDilateAmount: 5
     backEdgeDilateAmount: 5
-    renderer: {fileID: 5989924915103966853}
-    SubmeshIndex: 0
-    BoundsMode: 0
-    Bounds:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0.5, z: 0.5}
-    CutoutThreshold: 0.5
-    CullMode: 2
-    cutoutTextureName: 
-    DilateRenderingMode: 0
-    cutoutTextureIndex: 0
-  - IsVisible: 0
-    CutoutMask: 8
-    edgeDilateAmount: 5
-    frontEdgeDilateAmount: 5
-    backEdgeDilateAmount: 5
-    renderer: {fileID: 3886531216335880467}
-    SubmeshIndex: 0
-    BoundsMode: 0
-    Bounds:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0.5, z: 0.5}
-    CutoutThreshold: 0.5
-    CullMode: 2
-    cutoutTextureName: 
-    DilateRenderingMode: 0
-    cutoutTextureIndex: 0
-  - IsVisible: 0
-    CutoutMask: 8
-    edgeDilateAmount: 5
-    frontEdgeDilateAmount: 5
-    backEdgeDilateAmount: 5
-    renderer: {fileID: 6823175633327387521}
+    renderer: {fileID: 649241319464266696}
     SubmeshIndex: 0
     BoundsMode: 0
     Bounds:
@@ -759,7 +727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 716ce383a4c4c3a4f948612935cd5def, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 716ce383a4c4c3a4f948612935cd5def, type: 3}
       propertyPath: m_LocalRotation.x
@@ -767,11 +735,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 716ce383a4c4c3a4f948612935cd5def, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 716ce383a4c4c3a4f948612935cd5def, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 716ce383a4c4c3a4f948612935cd5def, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -783,7 +751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 716ce383a4c4c3a4f948612935cd5def, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 716ce383a4c4c3a4f948612935cd5def, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -796,13 +764,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: -5058685393145097617, guid: 716ce383a4c4c3a4f948612935cd5def, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1804188222050940483}
   m_SourcePrefab: {fileID: 100100000, guid: 716ce383a4c4c3a4f948612935cd5def, type: 3}
+--- !u!23 &649241319464266696 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6592186448244981529, guid: 716ce383a4c4c3a4f948612935cd5def, type: 3}
+  m_PrefabInstance: {fileID: 5944389973232145617}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6193591136755921722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 716ce383a4c4c3a4f948612935cd5def, type: 3}
   m_PrefabInstance: {fileID: 5944389973232145617}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7761187874250442430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5058685393145097617, guid: 716ce383a4c4c3a4f948612935cd5def, type: 3}
+  m_PrefabInstance: {fileID: 5944389973232145617}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1804188222050940483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7761187874250442430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034bc47afcbf5e141a58d5c20b7808e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7251173635738362137
 PrefabInstance:
   m_ObjectHideFlags: 0

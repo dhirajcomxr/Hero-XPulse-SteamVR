@@ -5,6 +5,8 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ToolRotationInteraction : MonoBehaviour
 {
     //public UnityEvent executeOnRotationComplete;
+    public bool isLocked = false;
+    public bool isSpanner = false;
     public XRGrabInteractable xRGrabInteractable;
     public Transform xRController;
     public ObjectRotation rotatingArrow;
@@ -39,7 +41,7 @@ public class ToolRotationInteraction : MonoBehaviour
     void OnEnable()
     {
         rotatingArrow.isAssembly = isClockwiseStep;
-        ResetEverythingOnEnable();
+        //ResetEverythingOnEnable();
     }
     void Start()
     {
@@ -48,10 +50,31 @@ public class ToolRotationInteraction : MonoBehaviour
 
     void Update()
     {
-        CheckRotation();
-        CountRotations();
+        if (!isLocked || !isSpanner) CheckRotation();
+        if(!isLocked || !isSpanner) CountRotations();
+        if (isSpanner)
+        {
+
+        }
+
     }
 
+
+    public void SpannerRotation()
+    {
+        if (!isAttached && !isToolInteracting) return;
+        if (xRController)
+        {
+            if (isClockwiseStep)
+            {
+
+            }
+            else
+            {
+
+            }
+        }
+    }
     public void AttachToComponent(bool isTrue)
     {
         if (isTrue)

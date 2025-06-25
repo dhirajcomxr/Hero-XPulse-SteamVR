@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class ToolAndAttachPoint
@@ -11,6 +12,9 @@ public class ToolAndAttachPoint
 }
 public class LoadModule : MonoBehaviour
 {
+    public string Scene;
+
+    [Space(10)]
     public GameObject mainBike;
     public GameObject[] engineModule;
     public GameObject[] wheelModule;
@@ -20,6 +24,11 @@ public class LoadModule : MonoBehaviour
 
     int toolModuleIndex = 0;
     GameObject[] moduleToLoad;
+
+    private void Awake()
+    {
+        LoadScene();
+    }
     public void LoadBikeModule(int moduleIndex)
     {
         // Unload the previous module if one is already loaded
@@ -70,5 +79,10 @@ public class LoadModule : MonoBehaviour
             }
             mainBike.SetActive(true);
         }
+    }
+
+    public void LoadScene()
+    {
+        SceneManager.LoadScene(Scene, LoadSceneMode.Additive);
     }
 }
