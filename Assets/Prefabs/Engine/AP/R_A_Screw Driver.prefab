@@ -43,12 +43,12 @@ GameObject:
   - component: {fileID: 2831228500305445446}
   - component: {fileID: 6893282573810694974}
   m_Layer: 0
-  m_Name: R_A_Screwdriver
+  m_Name: R_A_Screw Driver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1227261009510703376
 Transform:
   m_ObjectHideFlags: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 6622040020482215384}
+      - m_Target: {fileID: 3098718868485175917}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -338,7 +338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3fea0c37db3998d449bd4cff118952b7, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -348,6 +348,11 @@ PrefabInstance:
 --- !u!4 &2326967686613672151 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3fea0c37db3998d449bd4cff118952b7, type: 3}
+  m_PrefabInstance: {fileID: 2864770628099426108}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3098718868485175917 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3fea0c37db3998d449bd4cff118952b7, type: 3}
   m_PrefabInstance: {fileID: 2864770628099426108}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6280093215753138313
@@ -422,6 +427,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Impact Driver
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5d9f4f99fc9e6a84da48cf38401c0687, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8442510506162454399, guid: 5d9f4f99fc9e6a84da48cf38401c0687, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -434,10 +443,5 @@ PrefabInstance:
 --- !u!4 &5813556667768575842 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5d9f4f99fc9e6a84da48cf38401c0687, type: 3}
-  m_PrefabInstance: {fileID: 6280093215753138313}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6622040020482215384 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5d9f4f99fc9e6a84da48cf38401c0687, type: 3}
   m_PrefabInstance: {fileID: 6280093215753138313}
   m_PrefabAsset: {fileID: 0}

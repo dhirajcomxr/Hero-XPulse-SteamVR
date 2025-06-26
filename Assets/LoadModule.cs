@@ -9,6 +9,7 @@ public class ToolAndAttachPoint
     public string moduleName;
     public List<GameObject> AttachPoints = new List<GameObject>();
     public List<ToolRotationInteraction> Tools = new List<ToolRotationInteraction>();
+    public List<Mallet> Mallets = new List<Mallet>();
 }
 public class LoadModule : MonoBehaviour
 {
@@ -74,9 +75,19 @@ public class LoadModule : MonoBehaviour
             for (int i = 0; i < toolAndAttachPoints[toolModuleIndex].AttachPoints.Count - 1; i++)
             {
                 toolAndAttachPoints[toolModuleIndex].AttachPoints[i].SetActive(false);
-                toolAndAttachPoints[toolModuleIndex].Tools[i].ResetEverythingOnEnable();
+                toolAndAttachPoints[toolModuleIndex].Tools[i].ResetEverythingOnEnable();                               
                 toolAndAttachPoints[toolModuleIndex].Tools[i].gameObject.SetActive(false);
             }
+
+            if(toolAndAttachPoints[toolModuleIndex].Mallets.Count > 0)
+            {
+                for (int i = 0; i < toolAndAttachPoints[toolModuleIndex].Mallets.Count - 1; i++)
+                {
+                    toolAndAttachPoints[toolModuleIndex].Mallets[i].ResetEverythingOnEnable();
+                }
+            }
+            
+
             mainBike.SetActive(true);
         }
     }
@@ -84,5 +95,22 @@ public class LoadModule : MonoBehaviour
     public void LoadScene()
     {
         SceneManager.LoadScene(Scene, LoadSceneMode.Additive);
+    }
+
+    public void ResetTool()
+    {
+        for (int i = 0; i < toolAndAttachPoints[toolModuleIndex].AttachPoints.Count - 1; i++)
+        {
+            toolAndAttachPoints[toolModuleIndex].AttachPoints[i].SetActive(false);
+            toolAndAttachPoints[toolModuleIndex].Tools[i].ResetEverythingOnEnable();
+            toolAndAttachPoints[toolModuleIndex].Tools[i].gameObject.SetActive(false);
+        }
+        if (toolAndAttachPoints[toolModuleIndex].Mallets.Count > 0)
+        {
+            for (int i = 0; i < toolAndAttachPoints[toolModuleIndex].Mallets.Count - 1; i++)
+            {
+                toolAndAttachPoints[toolModuleIndex].Mallets[i].ResetEverythingOnEnable();
+            }
+        }
     }
 }

@@ -49,6 +49,7 @@ public class StepsManager : MonoBehaviour {
     public GameObject[] vr_Tools;
     public AudioSource audioSource;
     public Transform toolSpwanPos;
+    public LoadModule loadModule;
     #endregion
 
     #region EVENTS
@@ -179,6 +180,8 @@ public class StepsManager : MonoBehaviour {
 
     public void OnPrevious() {
         PreviousStep?.Invoke();
+        loadModule.ResetTool();
+
     }
  /*   public void resumeLaststep()
     {
