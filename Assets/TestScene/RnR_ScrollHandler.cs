@@ -72,6 +72,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class RnR_ScrollHandler : MonoBehaviour
 {
     public RectTransform content;
@@ -79,6 +80,7 @@ public class RnR_ScrollHandler : MonoBehaviour
     public int numberOfItems;
     public int currentStep;
     public Steps stepScript;
+    public TextMeshProUGUI stepText;
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -126,5 +128,10 @@ public class RnR_ScrollHandler : MonoBehaviour
         {
             Destroy(item.gameObject);
         }
+    }
+
+    public void SetCurretText()
+    {
+        stepText.text = stepScript.steps[currentStep].stepInstructions.ToString();
     }
 }

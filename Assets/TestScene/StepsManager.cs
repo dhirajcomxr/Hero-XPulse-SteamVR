@@ -109,6 +109,7 @@ public class StepsManager : MonoBehaviour {
      }*/
 
     public GameObject nextButtonHighlight;
+    public RnR_ScrollHandler scrollHandler;
     public void ControlNextButtonAnimation(bool isOff)
     {
         nextButtonHighlight.SetActive(isOff);
@@ -171,6 +172,7 @@ public class StepsManager : MonoBehaviour {
 
     public void OnNext() {
         NextStep?.Invoke();
+        scrollHandler.SetCurretText();
     }
 
     public void OnReplay()

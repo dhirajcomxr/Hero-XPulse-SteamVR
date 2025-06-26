@@ -40,7 +40,7 @@ public class ToolRotationInteraction : MonoBehaviour
     }
     void OnEnable()
     {
-        rotatingArrow.isAssembly = isClockwiseStep;
+        if (!isLocked) rotatingArrow.isAssembly = isClockwiseStep;
         ResetEverythingOnEnable();
     }
     void Start()
@@ -64,7 +64,7 @@ public class ToolRotationInteraction : MonoBehaviour
             {
                 xRGrabInteractable.enabled = false;
                 isAttached = true;
-                rotatingArrow.gameObject.SetActive(true);
+               if(!isLocked) rotatingArrow.gameObject.SetActive(true);
             });
         }
         else
@@ -153,6 +153,29 @@ public class ToolRotationInteraction : MonoBehaviour
         Debug.Log(data);
     }
 
+    public Collider[] thisColliders;
+    public void RotateLockedItem()
+    {
+        if (!isLocked) return;
+        rotatingArrow.isAssembly = !isClockwiseStep;
+        rotatingArrow.gameObject.SetActive(true);
+        float rotationAngle = isClockwiseStep ? 90f : -90f; // Rotate 90 degrees either direction
+        float duration = 3f;
+
+        LeanTween.rotateAround(t_HandleGfx.gameObject, Vector3.forward, rotationAngle, duration)
+                 .setEase(LeanTweenType.easeInOutSine)
+                 .setOnComplete(() => {
+                     Steps steps = FindObjectOfType<Steps>();
+
+                     if (steps && steps.gameObject.activeInHierarchy)
+                     {
+                         steps.userToolsInteraction();
+                         ResetTool();
+                         rotatingArrow.gameObject.SetActive(false);
+                         Debug.Log("Error is here");
+                     }
+                 });
+    }
     public void ResetTool()
     {
         this.gameObject.SetActive(true);
@@ -165,6 +188,10 @@ public class ToolRotationInteraction : MonoBehaviour
         xRGrabInteractable.enabled = true;
         isAttached = false;
         if (Outlinable) Outlinable.enabled = false;
+        foreach (var item in thisColliders)
+        {
+            item.enabled = true;
+        }
     }
 
     public void ResetEverythingOnEnable()
@@ -185,5 +212,9 @@ public class ToolRotationInteraction : MonoBehaviour
         rotatingArrow.gameObject.SetActive(false);
         attachPointGFX.SetActive(true);
         if (Outlinable) Outlinable.enabled = true;
+        foreach (var item in thisColliders)
+        {
+            item.enabled = true;
+        }
     }
 }

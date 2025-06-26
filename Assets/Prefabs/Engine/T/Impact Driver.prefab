@@ -319,6 +319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLocked: 0
+  isSpanner: 0
   xRGrabInteractable: {fileID: 5694054635512997056}
   xRController: {fileID: 0}
   rotatingArrow: {fileID: 1194939809357941915}
@@ -334,6 +335,10 @@ MonoBehaviour:
   initialRotationTool: {x: 0, y: 0, z: 270}
   attachPointGFX: {fileID: 0}
   Outlinable: {fileID: 7083697238955809440}
+  thisColliders:
+  - {fileID: 7747894603721825592}
+  - {fileID: 5847956034528743841}
+  - {fileID: 8252827910039986317}
 --- !u!114 &7083697238955809440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -610,7 +615,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2942399331155745160, guid: 6745c11db0bd0ab479387eaa88c53ec1, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2942399331155745162, guid: 6745c11db0bd0ab479387eaa88c53ec1, type: 3}
       propertyPath: m_LocalScale.x
@@ -670,7 +675,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2942399331155745163, guid: 6745c11db0bd0ab479387eaa88c53ec1, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

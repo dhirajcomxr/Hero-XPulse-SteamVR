@@ -43,8 +43,10 @@ public class Mallet : MonoBehaviour
         ResetEverythingOnEnable();
     }
 
+    public Collider boxCol;
     public void ResetEverythingOnEnable()
     {
+        boxCol.enabled = true;
         previousYaw = 0;
         totalZRotation = 0;
         lastZ = 0;
@@ -61,6 +63,7 @@ public class Mallet : MonoBehaviour
         rotatingArrow.gameObject.SetActive(false);
         attachPointGFX.SetActive(true);
         if (Outlinable) Outlinable.enabled = true;
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -68,9 +71,8 @@ public class Mallet : MonoBehaviour
         if (other.CompareTag("Impact Wrench"))
         {
             if (!tool.isAttached) return;
-            Steps steps = FindObjectOfType<Steps>();
-            steps.userToolsInteraction();
-            tool.ResetTool();
+            boxCol.enabled = false;
+            tool.RotateLockedItem();
         }
     }
 }

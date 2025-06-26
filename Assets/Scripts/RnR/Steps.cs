@@ -886,20 +886,20 @@ public class Steps : MonoBehaviour
         stepsMgr.Caution_Text.text = curStep.cautionNotes.ToString();
         // stepsMgr.clickOnNextOrPreviousButton();
 
-        stepinfo = loadedStepsInfo[currentStep].transform.GetChild(1).GetComponent<Text>();
+       /* stepinfo = loadedStepsInfo[currentStep].transform.GetChild(1).GetComponent<Text>();
         stepinfo.fontStyle = FontStyle.Normal;
         stepinfo.color = Color.white;
         stepinfo.GetComponentInParent<SwitchStepState>().IsOn(true);
-
+*/
 
         if (currentStep > 0)
         {
             previousStepInfo = loadedStepsInfo[currentStep - 1].transform.GetChild(1).GetComponent<Text>();
             if (previousStepInfo != null)
             {
-                previousStepInfo.fontStyle = FontStyle.Normal;
+                /*previousStepInfo.fontStyle = FontStyle.Normal;
                 previousStepInfo.color = Color.black;
-                previousStepInfo.GetComponentInParent<SwitchStepState>().IsOn(false);
+                previousStepInfo.GetComponentInParent<SwitchStepState>().IsOn(false);*/
             }
         }
         progressBar.SetScrollPosNext();

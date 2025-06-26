@@ -19,6 +19,8 @@ public class LoadModule : MonoBehaviour
     public GameObject mainBike;
     public GameObject[] engineModule;
     public GameObject[] wheelModule;
+    public ResetToolPositions[] refTools;
+
 
     private GameObject currentModule;
     public ToolAndAttachPoint[] toolAndAttachPoints;
@@ -85,10 +87,13 @@ public class LoadModule : MonoBehaviour
                 {
                     toolAndAttachPoints[toolModuleIndex].Mallets[i].ResetEverythingOnEnable();
                 }
-            }
-            
-
+            }        
             mainBike.SetActive(true);
+        }
+
+        foreach (var item in refTools)
+        {
+            item.ResetTool();
         }
     }
 
